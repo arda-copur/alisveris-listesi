@@ -1,0 +1,22 @@
+﻿@using Entities;
+@model UserProductListName
+
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h2>Add UserProductListName</h2>
+
+<form asp-controller="UserList" asp-action="AddUserList" method="post">
+    <div class="form-group">
+        <label for="ListeAdi">ListeAdi</label>
+        <input type="text" class="form-control" id="ListeAdi" name="ListeAdi" required>
+    </div>
+    <div class="form-group">
+        <label for="UserId">UserId</label>
+        <input type="number" class="form-control" id="UserId" name="UserId" value="1" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+

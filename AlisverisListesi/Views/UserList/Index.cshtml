@@ -1,0 +1,31 @@
+﻿@using Entities;
+@model List<UserProductListName>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UserListName List</title>
+</head>
+<body>
+    <h1>UserListName List</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>ListeAdi</th>
+            <th></th>
+
+        </tr>
+        @foreach (var userproductlistname in Model)
+        {
+            <tr>
+                <td>@userproductlistname.Id</td>
+                <td>@userproductlistname.ListeAdi</td>
+                <td><a href="/UserProductList/Index/@userproductlistname.Id" >listeyi gör</a></td>
+
+
+            </tr>
+        }
+    </table>
+    <a href="/UserList/AddUserList" class="btn btn-primary">ekle</a>
+</body>
+</html>

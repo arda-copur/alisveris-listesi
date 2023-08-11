@@ -1,0 +1,32 @@
+﻿@using Entities;
+@model UserProductList
+
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h2>Add UserProductList</h2>
+
+<form asp-controller="UserProductList" asp-action="AddUserProductList" method="post">
+
+    <div class="form-group">
+        <label for="UserProductListNameId">UserProductListNameId</label>
+        <select class="form-control" id="UserProductListNameId" name="UserProductListNameId" required>
+            @foreach (var userProductListNameId in ViewBag.userproductlistnamevalues)
+            {
+                <option value="@userProductListNameId.Value">@userProductListNameId.Text</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ProductId">ProductId</label>
+        <select class="form-control" id="ProductId" name="ProductId" required>
+            @foreach (var productId in ViewBag.productlistnamevalues)
+            {
+                <option value="@productId.Value">@productId.Text</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+

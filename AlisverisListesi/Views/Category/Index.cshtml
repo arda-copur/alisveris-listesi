@@ -1,0 +1,29 @@
+﻿@using Entities;
+@model List<Category>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Category List</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+
+        </tr>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Name</td>
+
+                
+            </tr>
+        }
+    </table>
+    <a href="/Category/addcategory" class="btn btn-primary">ekle</a>
+</body>
+</html>
